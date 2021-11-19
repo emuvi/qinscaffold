@@ -1,7 +1,7 @@
 {
   "name": "qinscaffold",
   "version": "0.1.0",
-  "description": "QinScaffold - Startup minimal Hello, world application for the Qinpel platform.",
+  "description": "QinScaffold - Startup minimal 'Hello, world' application for the Qinpel platform.",
   "main": "./build/main.js",
   "types": "./types/main.d.ts",
   "scripts": {
