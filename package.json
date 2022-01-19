@@ -4,9 +4,6 @@
   "description": "QinScaffold - Startup minimal 'Hello, world' application for the Qinpel platform.",
   "main": "./build/main.js",
   "types": "./types/main.d.ts",
-  "scripts": {
-    "start": "bash -v test.sh"
-  },
   "keywords": [],
   "author": "Éverton M. Vieira",
   "license": "LGPL-3.0-only",
