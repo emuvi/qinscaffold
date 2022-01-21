@@ -1,3 +1,3 @@
 # QinScaffold
 
-QinScaffold ( Qinpel Scaffold ) is a library with the minimal startup application on Qinpel, the Quick Interface for Pointel platform.
+QinScaffold ( Qinpel Scaffold ) is a library for applications with the minimal startup project on Qinpel, the Quick Interface for Pointel platform.
