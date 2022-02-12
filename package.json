@@ -1,14 +1,14 @@
 {
-  "name": "qinscaffold",
-  "version": "0.1.0",
-  "description": "QinScaffold ( Qinpel Scaffold ) is a library for applications with the minimal startup project on Qinpel, the Quick Interface for Pointel platform.",
-  "main": "./build/main.js",
-  "types": "./types/main.d.ts",
-  "keywords": [],
-  "author": "Éverton M. Vieira",
-  "license": "LGPL-3.0-only",
-  "dependencies": {
-    "qinpel-cps": "file:../qinpel-cps",
-    "qinpel-res": "file:../qinpel-res"
-  }
+	"name": "qinscaffold",
+	"version": "0.1.0",
+	"description": "QinScaffold ( Qinpel Scaffold ) is a library for user applications with the minimal startup project on Qinpel, the Quick Interface for Pointel platform.",
+	"main": "./build/main.js",
+	"types": "./types/main.d.ts",
+	"keywords": [],
+	"author": "Éverton M. Vieira",
+	"license": "LGPL-3.0-only",
+	"dependencies": {
+		"qinpel-cps": "file:../qinpel-cps",
+		"qinpel-res": "file:../qinpel-res"
+	}
 }
