@@ -1,12 +1,14 @@
 {
 	"name": "qinscaffold",
-	"version": "0.1.0",
+	"displayName": "QinScaffold",
 	"description": "QinScaffold ( Qinpel Scaffold ) is a library for user applications with the minimal startup project on Qinpel, the Quick Interface for Pointel platform.",
-	"main": "./build/main.js",
-	"types": "./types/main.d.ts",
 	"keywords": [],
+	"repository": "https://github.com/emuvi/qinscaffold",
 	"author": "Éverton M. Vieira",
 	"license": "LGPL-3.0-only",
+	"version": "0.1.0",
+	"main": "./build/main.js",
+	"types": "./types/main.d.ts",
 	"dependencies": {
 		"qinpel-cps": "file:../qinpel-cps",
 		"qinpel-res": "file:../qinpel-res"
