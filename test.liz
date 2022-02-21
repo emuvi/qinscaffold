@@ -1,0 +1,9 @@
+#!/bin/liz
+print("Testing...")
+name = "qinscaffold"
+liz.run("build")
+liz.cmd("browserify", {"build/index.js", "--debug", "-o", "public/index.js"})
+liz.rm("../../cmds/qinpel-srv/app/" .. name)
+liz.mkdir("../../cmds/qinpel-srv/app/" .. name)
+liz.cp("public", "../../cmds/qinpel-srv/app/" .. name)
+print("Done Test!")
