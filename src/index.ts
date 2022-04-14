@@ -1,41 +1,26 @@
-import {
-  QinLine,
-  QinColumn,
-  QinLabel,
-  QinButton,
-  QinMenu,
-  QinMenuItem,
-  QinIcon,
-  QinAsset,
-} from "qinpel-cps";
-import { QinGrandeur } from "qinpel-res";
+import { QinStack, QinPanel } from "qinpel-cps";
 
-class QinScaffold extends QinColumn {
-  private qinTopBar = new QinLine();
-  private qinTest = new QinButton({ label: new QinLabel("Test") });
-  private qinMenu = new QinMenu();
-
+class QinScaffold extends QinStack {
   public constructor() {
     super();
-    this.qinTopBar.install(this);
-    this.qinTopBar.style.putAsFlexMin();
-    this.qinTest.install(this.qinTopBar);
-    this.qinTest.addAction((ev) => {
-      if (ev.isPrimary) {
-        let item = new QinMenuItem(
-          new QinIcon(QinAsset.FaceBag, QinGrandeur.LARGE),
-          new QinLabel("Bag of the multifarios bagged.")
-        );
-        item.addAction((ev) => {
-          if (ev.isSecondary) {
-            item.swapSelect();
-          }
-        });
-        this.qinMenu.putItem(item);
-      }
-    });
-    this.qinMenu.install(this);
-    this.qinMenu.style.putAsFlexMax();
+    let panel1 = new QinPanel();
+    panel1.style.putAsBackground("green");
+    this.add(panel1);
+    let panel2 = new QinPanel();
+    panel2.style.putAsBackground("yellow");
+    this.add(panel2);
+    let panel3 = new QinPanel();
+    panel3.style.putAsBackground("red");
+    this.add(panel3);
+    setTimeout(() => {
+      panel1.style.putAsZIndex(10);
+    }, 3000);
+    setTimeout(() => {
+      panel2.style.putAsZIndex(10);
+    }, 6000);
+    setTimeout(() => {
+      panel3.style.putAsZIndex(10);
+    }, 9000);
   }
 }
 
