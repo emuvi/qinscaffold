@@ -1,26 +1,17 @@
-import { QinStack, QinPanel } from "qinpel-cps";
+import { QinPanel, QinColumn, QinLine, QinButton, QinLabel, QinTable } from "qinpel-cps";
 
-class QinScaffold extends QinStack {
+class QinScaffold extends QinColumn {
   public constructor() {
     super();
-    let panel1 = new QinPanel();
-    panel1.style.putAsBackground("green");
-    this.add(panel1);
-    let panel2 = new QinPanel();
-    panel2.style.putAsBackground("yellow");
-    this.add(panel2);
-    let panel3 = new QinPanel();
-    panel3.style.putAsBackground("red");
-    this.add(panel3);
-    setTimeout(() => {
-      panel1.style.putAsZIndex(10);
-    }, 3000);
-    setTimeout(() => {
-      panel2.style.putAsZIndex(10);
-    }, 6000);
-    setTimeout(() => {
-      panel3.style.putAsZIndex(10);
-    }, 9000);
+    let line = new QinLine();
+    line.install(this);
+    let button = new QinButton({ label: new QinLabel("Click me!") });
+    button.install(line);
+    let table = new QinTable();
+    table.install(this);
+    table.setHead(["Name", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age", "Current Age"]);
+    table.addLine(["John", "251", "251", "251", "251", "251", "251", "251", "251", "251", "251", "251", "251", "251"]);
+    table.addLine(["Jane", "242", "242", "242", "242", "242", "242", "242", "242", "242", "242", "242", "242", "242"]);
   }
 }
 
