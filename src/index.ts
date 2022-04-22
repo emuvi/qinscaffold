@@ -9,6 +9,7 @@ class QinScaffold extends QinColumn {
     field2.style.putAsMinWidth(100);
     let splitter = new QinSplitter({sideA: field1, sideB: field2});
     splitter.install(this);
+    splitter.setVertical();
     splitter.style.putAsFlexMax();
   }
 }
