@@ -1,14 +1,20 @@
-import { QinColumn, QinTable } from "qinpel-cps";
+import { QinButton, QinColumn, QinLabel, QinString } from "qinpel-cps";
 
 class QinScaffold extends QinColumn {
   public constructor() {
     super();
-    let table = new QinTable();
-    table.install(this);
-    table.setHead(["Name", "Age", "City"]);
-    table.addLine(["John", "25", "New York"]);
-    table.addLine(["Jane", "24", "Paris"]);
-    table.addLine(["Jack", "26", "London"]);
+    let test = new QinString();
+    test.install(this);
+    let put = new QinButton({ label: new QinLabel("Put") });
+    put.install(this);
+    put.addActionMain(() => {
+      test.setData("City");
+    });
+    let get = new QinButton({ label: new QinLabel("Get") });
+    get.install(this);
+    get.addActionMain(() => {
+      console.log(test.getData());
+    });
   }
 }
 
