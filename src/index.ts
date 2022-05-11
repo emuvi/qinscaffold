@@ -1,19 +1,32 @@
-import { QinButton, QinColumn, QinLabel, QinString } from "qinpel-cps";
+import {
+  QinButton,
+  QinColumn,
+  QinInteger,
+  QinLabel,
+  QinLine,
+  QinString,
+} from "qinpel-cps";
 
 class QinScaffold extends QinColumn {
+  private _edit = new QinButton({ label: new QinLabel("Edit") });
+  private _read = new QinButton({ label: new QinLabel("Read") });
+  private _line1 = new QinLine({ items: [this._edit, this._read] });
+
+  private _int = new QinInteger();
+  private _str = new QinString();
+  private _line2 = new QinLine({ items: [this._int, this._str] });
+
   public constructor() {
     super();
-    let test = new QinString();
-    test.install(this);
-    let put = new QinButton({ label: new QinLabel("Put") });
-    put.install(this);
-    put.addActionMain(() => {
-      test.setData("City");
+    this._line1.install(this);
+    this._line2.install(this);
+    this._edit.addActionMain(() => {
+      this._int.turnEditable();
+      this._str.turnEditable();
     });
-    let get = new QinButton({ label: new QinLabel("Get") });
-    get.install(this);
-    get.addActionMain(() => {
-      console.log(test.getData());
+    this._read.addActionMain(() => {
+      this._int.turnReadOnly();
+      this._str.turnReadOnly();
     });
   }
 }
