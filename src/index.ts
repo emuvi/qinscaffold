@@ -16,8 +16,8 @@ class QinScaffold extends QinColumn {
   private _str = new QinString();
   private _line2 = new QinLine({ items: [this._int, this._str] });
 
-  private _alert = new QinButton({ label: new QinLabel("Alert") });
-  private _line3 = new QinLine({ items: [this._alert] });
+  private _dialog = new QinButton({ label: new QinLabel("Dialog") });
+  private _line3 = new QinLine({ items: [this._dialog] });
 
   public constructor() {
     super();
@@ -32,10 +32,10 @@ class QinScaffold extends QinColumn {
       this._str.turnReadOnly();
     });
     this._line3.install(this);
-    this._alert.addActionMain(() => {
-      this.qinpel.jobbed.showAlert(
-        "This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. This is a message from the scaffold. "
-      );
+    this._dialog.addActionMain(() => {
+      this.qinpel.jobbed.showDialog("Should we go?").then((result) => {
+        console.log(result);
+      });
     });
   }
 }
