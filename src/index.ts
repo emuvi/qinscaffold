@@ -33,9 +33,11 @@ class QinScaffold extends QinColumn {
     });
     this._line3.install(this);
     this._dialog.addActionMain(() => {
-      this.qinpel.jobbed.showDialog("Should we go?").then((result) => {
-        console.log(result);
-      });
+      this.qinpel.jobbed
+        .showDialog("There's a cow on the road.\nShould we stop?")
+        .then((result) => {
+          console.log(result);
+        });
     });
   }
 }
