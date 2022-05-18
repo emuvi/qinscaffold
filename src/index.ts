@@ -18,7 +18,7 @@ class QinScaffold extends QinColumn {
       ["Jack", "20", "London"],
     ]);
     this._button.addActionMain(() => {
-      console.log(this._table.getLine(1));
+      console.log(this._table.getLinesSize());
     });
   }
 }
