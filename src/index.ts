@@ -1,7 +1,9 @@
 import { QinButton, QinColumn, QinLabel, QinLine } from "qinpel-cps";
 
 class QinScaffold extends QinColumn {
-  private _btnInfo = new QinButton({ label: new QinLabel("Show Info") });
+  private _btnInfo = new QinButton({ label: new QinLabel("Show Info") }).styled({
+    width: "800px",
+  });
   private _btnError = new QinButton({ label: new QinLabel("Show Error") });
   private _line1 = new QinLine({ items: [this._btnInfo, this._btnError] });
 
