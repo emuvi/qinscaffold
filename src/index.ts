@@ -40,25 +40,25 @@ class QinScaffold extends QinColumn {
   public constructor() {
     super();
     this._qinLine.install(this);
-    this._qinBoolean.getOnChanged((res) => {
+    this._qinBoolean.addOnChanged((res) => {
       console.log("bol: " + res);
     });
     this._qinActBoolean.addActionMain((_) => {
       this._qinBoolean.value = true;
     });
-    this._qinCombo.getOnChanged((res) => {
+    this._qinCombo.addOnChanged((res) => {
       console.log("com: " + res);
     });
     this._qinActCombo.addActionMain((_) => {
       this._qinCombo.value = "02";
     });
-    this._qinInteger.getOnChanged((res) => {
+    this._qinInteger.addOnChanged((res) => {
       console.log("int: " + res);
     });
     this._qinActInteger.addActionMain((_) => {
       this._qinInteger.value = 12;
     });
-    this._qinString.getOnChanged((res) => {
+    this._qinString.addOnChanged((res) => {
       console.log("str: " + res);
     });
     this._qinActString.addActionMain((_) => {
